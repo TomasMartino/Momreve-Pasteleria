@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Momreve Pastelería | El Arte de la Pastelería en Tunuyán, Mendoza</title>
+    <meta name="description" content="Momreve Pastelería en Tunuyán, Mendoza. Tortas decoradas, mesas dulces y saladas para eventos. El arte de la pastelería, hecho a mano. Pedí por WhatsApp.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        mom: { 50: '#fdf8f5', 100: '#f7e8e0', 200: '#e8cdb8', 400: '#c9a080', 500: '#b78a65', 600: '#9c7352', 700: '#7d5a40' },
+                        sage: { 50: '#f4f7f4', 600: '#6b7c5e' }
+                    },
+                    fontFamily: { sans: ['Inter','sans-serif'], display: ['Playfair Display','serif'] }
+                }
+            }
+        }
+    </script>
+    <style>
+        html { scroll-behavior: smooth; overflow-x: hidden; }
+        body { overflow-x: hidden; }
+        .whatsapp-float { position: fixed; bottom: 20px; right: 20px; z-index: 50; }
+        .hero-overlay { background: linear-gradient(105deg, rgba(253,248,245,0.97) 0%, rgba(253,248,245,0.88) 45%, rgba(253,248,245,0.52) 68%, rgba(253,248,245,0.12) 100%); }
+        .card-hover { transition: transform 0.3s ease, box-shadow 0.3s ease; }
+        .card-hover:hover { transform: translateY(-4px); box-shadow: 0 20px 40px rgba(0,0,0,0.07); }
+        @media (max-width: 640px) {
+            .hero-overlay { background: linear-gradient(180deg, rgba(253,248,245,0.96) 0%, rgba(253,248,245,0.88) 60%, rgba(253,248,245,0.70) 100%); }
+        }
+    </style>
+</head>
+<body class="bg-mom-50 font-sans antialiased overflow-x-hidden">
+
+    <div class="bg-stone-900 text-stone-200 text-xs py-2 px-4 overflow-hidden">
+        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1 sm:gap-2">
+            <span class="flex flex-wrap items-center gap-1.5 min-w-0">
+                <span class="w-2 h-2 bg-mom-400 rounded-full flex-shrink-0"></span>
+                <span class="min-w-0">Tunuyán, Valle de Uco, Mendoza · Mesas dulces y saladas</span>
+                <span class="hidden sm:inline text-stone-500">·</span>
+                <span class="text-stone-400">Pedidos con anticipación</span>
+            </span>
+            <a href="https://www.instagram.com/momreve.pasteleria/" target="_blank" rel="noopener" class="flex items-center gap-1.5 hover:text-white transition font-semibold flex-shrink-0">IG · @momreve.pasteleria</a>
+        </div>
+    </div>
+
+    <nav class="bg-white/90 backdrop-blur-md shadow-sm sticky top-0 z-40 border-b border-stone-200">
+        <div class="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between gap-3">
+            <div class="flex items-center gap-3 min-w-0 flex-shrink">
+                <div class="w-9 h-9 sm:w-10 sm:h-10 bg-mom-600 rounded-xl flex items-center justify-center flex-shrink-0 shadow-sm">
+                    <span class="text-white font-display font-bold text-sm">M</span>
+                </div>
+                <div class="min-w-0">
+                    <p class="font-display font-bold text-stone-900 leading-none text-sm sm:text-[15px] tracking-tight">MOMREVE</p>
+                    <p class="font-semibold text-mom-500 text-[10px] sm:text-[11px] tracking-[0.2em] leading-none">PASTELERÍA · TUNUYÁN</p>
+                </div>
+            </div>
+            <div class="hidden lg:flex items-center gap-6 text-sm font-semibold text-stone-600 flex-shrink-0">
+                <a href="#inicio" class="hover:text-mom-600 transition">Inicio</a>
+                <a href="#tortas" class="hover:text-mom-600 transition">Tortas</a>
+                <a href="#mesas" class="hover:text-mom-600 transition">Mesas dulces</a>
+                <a href="#contacto" class="hover:text-mom-600 transition">Contacto</a>
+            </div>
+            <a href="https://wa.me/5492622000000?text=Hola%20Momreve!%20Quiero%20consultar%20por%20una%20torta" 
+               class="bg-mom-600 text-white px-3 sm:px-5 py-2 sm:py-2.5 rounded-full text-xs sm:text-sm font-bold hover:bg-mom-700 transition flex items-center gap-1.5 sm:gap-2 shadow-sm whitespace-nowrap flex-shrink-0">
+                <svg class="w-4 h-4 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                <span class="hidden xs:inline">Consultar por WhatsApp</span><span class="xs:hidden">WhatsApp</span>
+            </a>
+        </div>
+    </nav>
+
+    <section id="inicio" class="relative overflow-hidden flex items-center">
+        <div class="absolute inset-0">
+            <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=1920&h=1080&fit=crop" alt="Torta decorada artesanal" class="w-full h-full object-cover">
+            <div class="absolute inset-0 hero-overlay"></div>
+        </div>
+        <div class="relative z-10 max-w-7xl mx-auto px-4 py-10 sm:py-14 md:py-20 w-full grid lg:grid-cols-12 gap-6 sm:gap-8 items-center">
+            <div class="lg:col-span-7 min-w-0">
+                <span class="inline-flex items-center gap-2 bg-white text-mom-700 text-[11px] sm:text-xs font-black tracking-widest uppercase px-3 py-1.5 rounded-full shadow-sm border border-mom-100">Tunuyán · Valle de Uco</span>
+                <h1 class="font-display text-[30px] xs:text-3xl sm:text-4xl md:text-5xl font-bold text-stone-900 leading-[0.95] mt-4 tracking-tight break-words">
+                    El arte de la<br>
+                    <span class="italic text-mom-600 font-semibold">pastelería.</span>
+                </h1>
+                <p class="text-stone-600 text-base sm:text-lg mt-3 sm:mt-4 max-w-xl leading-relaxed">
+                    Tortas decoradas, mesas dulces y saladas para tus eventos. Cada torta hecha a mano, con dedicación y sabor casero.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-3 mt-6 sm:mt-8">
+                    <a href="https://wa.me/5492622000000?text=Hola%20Momreve!%20Quiero%20consultar%20por%20una%20torta" class="bg-mom-600 text-white px-6 sm:px-8 py-3.5 sm:py-4 rounded-full font-bold hover:bg-mom-700 transition shadow-md flex items-center justify-center gap-2 text-center">
+                        <svg class="w-5 h-5 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347"/></svg>
+                        Encargar por WhatsApp
+                    </a>
+                    <a href="#tortas" class="bg-white border border-stone-300 text-stone-800 px-6 sm:px-8 py-3.5 sm:py-4 rounded-full font-bold hover:bg-stone-50 transition text-center">Ver tortas</a>
+                </div>
+                <div class="flex flex-wrap gap-3 sm:gap-6 mt-6 sm:mt-8 text-stone-600 text-xs sm:text-sm font-medium">
+                    <span class="flex items-center gap-2">🎂 Tortas decoradas</span>
+                    <span class="flex items-center gap-2">🍰 Mesas dulces y saladas</span>
+                    <span class="flex items-center gap-2">🎉 Para todo evento</span>
+                </div>
+            </div>
+            <div class="lg:col-span-5 min-w-0">
+                <div class="bg-white rounded-[20px] sm:rounded-[28px] p-4 sm:p-6 shadow-xl border border-stone-100">
+                    <div class="flex items-center justify-between gap-2 mb-4">
+                        <p class="font-bold text-stone-900 tracking-tight text-sm sm:text-base">Hacé tu pedido</p>
+                        <span class="bg-green-50 text-green-700 border border-green-100 text-[11px] sm:text-xs font-bold px-2.5 py-1 rounded-full whitespace-nowrap">Respuesta rápida</span>
+                    </div>
+                    <div class="space-y-3">
+                        <a href="https://wa.me/5492622000000?text=Hola%20Momreve!%20Quiero%20hacer%20un%20pedido" class="flex items-center gap-3 bg-stone-900 text-white rounded-2xl p-4 hover:bg-black transition">
+                            <span class="w-10 h-10 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0">
+                                <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347"/></svg>
+                            </span>
+                            <div class="flex-1 min-w-0">
+                                <p class="font-bold text-sm leading-none">WhatsApp</p>
+                                <p class="text-white/70 text-xs">Escribinos y te pasamos catálogo</p>
+                            </div>
+                            <span class="text-white/60 flex-shrink-0">→</span>
+                        </a>
+                        <div class="grid grid-cols-2 gap-2 sm:gap-3">
+                            <div class="bg-mom-50 rounded-2xl p-3 sm:p-4 border border-mom-100 min-w-0">
+                                <p class="font-mono text-[11px] sm:text-xs text-mom-600">PEDIDOS</p>
+                                <p class="font-bold text-stone-900 text-xs sm:text-sm mt-1 leading-tight">Con anticipación<br>48hs mínimo</p>
+                            </div>
+                            <div class="bg-sage-50 rounded-2xl p-3 sm:p-4 border border-green-100 min-w-0">
+                                <p class="font-mono text-[11px] sm:text-xs text-sage-600">UBICACIÓN</p>
+                                <p class="font-bold text-stone-900 text-xs sm:text-sm mt-1 leading-tight">Tunuyán<br>Valle de Uco</p>
+                            </div>
+                        </div>
+                        <p class="text-[11px] sm:text-xs text-stone-500 text-center">Tortas desde $25.000 · Consultá por tu evento</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="tortas" class="py-12 md:py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-8">
+                <p class="text-mom-500 font-bold text-xs tracking-[0.18em] uppercase">Nuestras especialidades</p>
+                <h2 class="text-3xl md:text-4xl font-black text-stone-900 tracking-tight mt-1">Tortas y mesas para cada ocasión</h2>
+                <p class="text-stone-500 mt-2 max-w-2xl mx-auto">Cumpleaños, casamientos, 15 años o simplemente para compartir algo rico.</p>
+            </div>
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-4">
+                <a href="https://wa.me/5492622000000?text=Hola!%20Consulto%20por%20Tortas%20decoradas" class="group bg-mom-50 rounded-3xl p-5 border border-mom-100 card-hover text-center">
+                    <div class="w-12 h-12 bg-white rounded-2xl flex items-center justify-center mx-auto mb-3 shadow-sm text-lg">🎂</div>
+                    <h3 class="font-bold text-stone-900">Tortas decoradas</h3>
+                    <p class="text-stone-500 text-xs mt-1">Personalizadas a tu gusto</p>
+                </a>
+                <a href="https://wa.me/5492622000000?text=Hola!%20Consulto%20por%20Mesas%20dulces" class="group bg-white rounded-3xl p-5 border border-stone-200 card-hover text-center">
+                    <div class="w-12 h-12 bg-pink-50 rounded-2xl flex items-center justify-center mx-auto mb-3 text-lg">🧁</div>
+                    <h3 class="font-bold text-stone-900">Mesas dulces</h3>
+                    <p class="text-stone-500 text-xs mt-1">Shots, tartas y mini postres</p>
+                </a>
+                <a href="https://wa.me/5492622000000?text=Hola!%20Consulto%20por%20Mesas%20saladas" class="group bg-white rounded-3xl p-5 border border-stone-200 card-hover text-center">
+                    <div class="w-12 h-12 bg-amber-50 rounded-2xl flex items-center justify-center mx-auto mb-3 text-lg">🥪</div>
+                    <h3 class="font-bold text-stone-900">Mesas saladas</h3>
+                    <p class="text-stone-500 text-xs mt-1">Bocaditos y salados</p>
+                </a>
+                <a href="https://wa.me/5492622000000?text=Hola!%20Consulto%20por%20Eventos" class="group bg-white rounded-3xl p-5 border border-stone-200 card-hover text-center">
+                    <div class="w-12 h-12 bg-sage-50 rounded-2xl flex items-center justify-center mx-auto mb-3 text-lg">🎉</div>
+                    <h3 class="font-bold text-stone-900">Eventos</h3>
+                    <p class="text-stone-500 text-xs mt-1">Servicio completo</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-12 md:py-16 bg-[#fdfaf8]">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex flex-wrap items-end justify-between gap-4 mb-8">
+                <div>
+                    <p class="text-mom-500 font-bold text-xs tracking-[0.18em] uppercase">Más pedidos</p>
+                    <h2 class="text-3xl md:text-4xl font-black text-stone-900 tracking-tight mt-1">Nuestras tortas</h2>
+                </div>
+                <p class="text-stone-500 text-sm max-w-md">Precios de referencia. Consultá por WhatsApp y te armamos algo a tu medida.</p>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-5">
+                <div class="bg-white rounded-3xl overflow-hidden border border-stone-200 card-hover flex flex-col">
+                    <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=600&h=600&fit=crop" alt="Torta decorada" class="w-full h-52 object-cover">
+                    <div class="p-5 flex flex-col flex-1">
+                        <p class="text-xs font-bold tracking-widest text-stone-400 uppercase">Decorada · Personalizada</p>
+                        <h3 class="font-bold text-stone-900 mt-1">Torta Decorada Premium</h3>
+                        <p class="text-xs text-stone-500 mt-1">Buttercream, detalles a mano</p>
+                        <p class="text-lg font-black text-stone-900 mt-3">Consultar precio</p>
+                        <a href="https://wa.me/5492622000000?text=Hola!%20Me%20interesa%20la%20Torta%20Decorada%20Premium" class="mt-4 bg-stone-900 text-white text-sm font-bold py-2.5 rounded-full text-center hover:bg-black transition">Consultar por WhatsApp</a>
+                    </div>
+                </div>
+                <div class="bg-white rounded-3xl overflow-hidden border border-stone-200 card-hover flex flex-col">
+                    <img src="https://images.unsplash.com/photo-1464349095431-e9a21285b5f3?w=600&h=600&fit=crop" alt="Mesa dulce" class="w-full h-52 object-cover">
+                    <div class="p-5 flex flex-col flex-1">
+                        <p class="text-xs font-bold tracking-widest text-stone-400 uppercase">Mesa dulce · Evento</p>
+                        <h3 class="font-bold text-stone-900 mt-1">Mesa Dulce Completa</h3>
+                        <p class="text-xs text-stone-500 mt-1">Shots, tartas, mini postres</p>
+                        <p class="text-lg font-black text-stone-900 mt-3">Consultar precio</p>
+                        <a href="https://wa.me/5492622000000?text=Hola!%20Me%20interesa%20la%20Mesa%20Dulce%20Completa" class="mt-4 bg-white border border-stone-300 text-stone-800 text-sm font-bold py-2.5 rounded-full text-center hover:bg-stone-900 hover:text-white hover:border-stone-900 transition">Consultar por WhatsApp</a>
+                    </div>
+                </div>
+                <div class="bg-white rounded-3xl overflow-hidden border border-stone-200 card-hover flex flex-col">
+                    <img src="https://images.unsplash.com/photo-1565958011703-44f9829ba187?w=600&h=600&fit=crop" alt="Torta clásica" class="w-full h-52 object-cover">
+                    <div class="p-5 flex flex-col flex-1">
+                        <p class="text-xs font-bold tracking-widest text-stone-400 uppercase">Clásica · Familiar</p>
+                        <h3 class="font-bold text-stone-900 mt-1">Torta Clásica de Cumple</h3>
+                        <p class="text-xs text-stone-500 mt-1">Bizcochuelo, dulce y crema</p>
+                        <p class="text-lg font-black text-stone-900 mt-3">Consultar precio</p>
+                        <a href="https://wa.me/5492622000000?text=Hola!%20Me%20interesa%20la%20Torta%20Cl%C3%A1sica" class="mt-4 bg-white border border-stone-300 text-stone-800 text-sm font-bold py-2.5 rounded-full text-center hover:bg-stone-900 hover:text-white hover:border-stone-900 transition">Consultar por WhatsApp</a>
+                    </div>
+                </div>
+                <div class="bg-white rounded-3xl overflow-hidden border border-stone-200 card-hover flex flex-col">
+                    <img src="https://images.unsplash.com/photo-1551024506-0bccd828d307?w=600&h=600&fit=crop" alt="Mesa salada" class="w-full h-52 object-cover">
+                    <div class="p-5 flex flex-col flex-1">
+                        <p class="text-xs font-bold tracking-widest text-stone-400 uppercase">Salada · Bocaditos</p>
+                        <h3 class="font-bold text-stone-900 mt-1">Mesa Salada</h3>
+                        <p class="text-xs text-stone-500 mt-1">Sanguchitos, empanaditas y más</p>
+                        <p class="text-lg font-black text-stone-900 mt-3">Consultar precio</p>
+                        <a href="https://wa.me/5492622000000?text=Hola!%20Me%20interesa%20la%20Mesa%20Salada" class="mt-4 bg-white border border-stone-300 text-stone-800 text-sm font-bold py-2.5 rounded-full text-center hover:bg-stone-900 hover:text-white hover:border-stone-900 transition">Consultar por WhatsApp</a>
+                    </div>
+                </div>
+            </div>
+            <p class="text-center text-stone-400 text-xs mt-6">Fotos de muestra. Se reemplazan por fotos reales de sus tortas para el cierre.</p>
+        </div>
+    </section>
+
+    <section id="mesas" class="py-12 md:py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid lg:grid-cols-2 gap-10 items-center">
+                <div>
+                    <p class="text-mom-500 font-bold text-xs tracking-[0.18em] uppercase">Por qué Momreve</p>
+                    <h2 class="text-3xl md:text-4xl font-black text-stone-900 tracking-tight mt-1">El arte en cada detalle</h2>
+                    <p class="text-stone-600 mt-4 leading-relaxed">En Tunuyán nos conocen por la dedicación en cada torta. Cada pedido se hace a mano, con ingredientes de calidad y el diseño que vos imagines.</p>
+                    <div class="grid sm:grid-cols-2 gap-4 mt-8">
+                        <div class="bg-[#fdfaf8] rounded-2xl p-5 border border-stone-100">
+                            <p class="text-xl">🎨</p>
+                            <h3 class="font-bold text-stone-900 mt-2">Diseño personalizado</h3>
+                            <p class="text-sm text-stone-600 mt-1">La torta como la imaginás.</p>
+                        </div>
+                        <div class="bg-[#fdfaf8] rounded-2xl p-5 border border-stone-100">
+                            <p class="text-xl">🧁</p>
+                            <h3 class="font-bold text-stone-900 mt-2">Mesas completas</h3>
+                            <p class="text-sm text-stone-600 mt-1">Dulce y salado para tu evento.</p>
+                        </div>
+                        <div class="bg-[#fdfaf8] rounded-2xl p-5 border border-stone-100">
+                            <p class="text-xl">💬</p>
+                            <h3 class="font-bold text-stone-900 mt-2">Atención cercana</h3>
+                            <p class="text-sm text-stone-600 mt-1">Te asesoramos en cada paso.</p>
+                        </div>
+                        <div class="bg-[#fdfaf8] rounded-2xl p-5 border border-stone-100">
+                            <p class="text-xl">📍</p>
+                            <h3 class="font-bold text-stone-900 mt-2">Tunuyán y Valle de Uco</h3>
+                            <p class="text-sm text-stone-600 mt-1">Entregas coordinadas.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-mom-600 rounded-[28px] p-8 text-white">
+                    <p class="font-mono text-xs tracking-widest text-mom-100 uppercase">Eventos</p>
+                    <h3 class="text-2xl font-black mt-2">¿Tenés un evento cerca?</h3>
+                    <p class="text-white/85 text-sm mt-3">Contanos tu idea y te armamos una propuesta. Tortas, mesas dulces y saladas para que no te preocupes por nada.</p>
+                    <div class="flex flex-wrap gap-2 mt-6">
+                        <span class="bg-white text-stone-900 rounded-full px-4 py-2 text-xs font-bold">Cumpleaños</span>
+                        <span class="bg-white text-stone-900 rounded-full px-4 py-2 text-xs font-bold">Casamientos</span>
+                        <span class="bg-white text-stone-900 rounded-full px-4 py-2 text-xs font-bold">15 Años</span>
+                        <span class="bg-white text-stone-900 rounded-full px-4 py-2 text-xs font-bold">Bautismos</span>
+                        <span class="bg-white text-stone-900 rounded-full px-4 py-2 text-xs font-bold">Empresariales</span>
+                    </div>
+                    <a href="https://wa.me/5492622000000?text=Hola!%20Quiero%20consultar%20por%20un%20evento" class="inline-block mt-6 bg-stone-900 text-white px-6 py-3 rounded-full text-sm font-bold hover:bg-black transition">Consultar por evento</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-12 bg-[#fdfaf8]">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+                <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=600&h=600&fit=crop" alt="Torta decorada" class="rounded-3xl w-full h-48 md:h-64 object-cover">
+                <img src="https://images.unsplash.com/photo-1464349095431-e9a21285b5f3?w=600&h=600&fit=crop" alt="Mesa dulce" class="rounded-3xl w-full h-48 md:h-64 object-cover">
+                <img src="https://images.unsplash.com/photo-1565958011703-44f9829ba187?w=600&h=600&fit=crop" alt="Torta clásica" class="rounded-3xl w-full h-48 md:h-64 object-cover">
+                <img src="https://images.unsplash.com/photo-1551024506-0bccd828d307?w=600&h=600&fit=crop" alt="Mesa salada" class="rounded-3xl w-full h-48 md:h-64 object-cover hidden md:block">
+                <img src="https://images.unsplash.com/photo-1488477181946-64290103bb53?w=600&h=600&fit=crop" alt="Pastelería artesanal" class="rounded-3xl w-full h-48 md:h-64 object-cover hidden md:block">
+                <img src="https://images.unsplash.com/photo-1519869325930-281384150729?w=600&h=600&fit=crop" alt="Torta con detalles" class="rounded-3xl w-full h-48 md:h-64 object-cover hidden md:block">
+            </div>
+            <p class="text-center text-stone-400 text-xs mt-4">Fotos de muestra. Se reemplazan por fotos reales de sus tortas.</p>
+        </div>
+    </section>
+
+    <section id="contacto" class="py-12 md:py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-8">
+                <p class="text-mom-500 font-bold text-xs tracking-[0.18em] uppercase">Contacto</p>
+                <h2 class="text-3xl md:text-4xl font-black text-stone-900 tracking-tight mt-1">Pedí tu torta por WhatsApp</h2>
+                <p class="text-stone-500 mt-2">Tunuyán, Mendoza · Te respondemos en el momento</p>
+            </div>
+            <div class="grid lg:grid-cols-5 gap-6">
+                <div class="lg:col-span-2 space-y-4">
+                    <a href="https://wa.me/5492622000000?text=Hola%20Momreve!%20Quiero%20hacer%20un%20pedido" class="flex items-center gap-4 bg-green-500 text-white rounded-3xl p-5 hover:bg-green-600 transition shadow-md">
+                        <span class="w-12 h-12 bg-white rounded-full flex items-center justify-center flex-shrink-0">
+                            <svg class="w-6 h-6 text-green-600" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347"/></svg>
+                        </span>
+                        <div>
+                            <p class="font-black">WhatsApp</p>
+                            <p class="text-white/90 font-semibold">Escribinos ahora</p>
+                            <p class="text-white/70 text-xs">Tocá para encargar tu torta</p>
+                        </div>
+                        <span class="ml-auto text-xl">→</span>
+                    </a>
+                    <div class="bg-stone-50 rounded-3xl p-5 border border-stone-200 flex items-center gap-4">
+                        <span class="w-12 h-12 bg-pink-50 rounded-full flex items-center justify-center flex-shrink-0 text-lg">📷</span>
+                        <div>
+                            <p class="font-bold text-stone-900">Instagram</p>
+                            <a href="https://www.instagram.com/momreve.pasteleria/" target="_blank" rel="noopener" class="text-mom-600 text-sm font-semibold hover:underline">@momreve.pasteleria</a>
+                        </div>
+                    </div>
+                    <div class="bg-stone-900 rounded-3xl p-5 text-white">
+                        <p class="font-black">Pedidos</p>
+                        <p class="text-white/80 text-sm mt-1">Con 48hs de anticipación · Coordiná por WhatsApp</p>
+                    </div>
+                </div>
+                <div class="lg:col-span-3">
+                    <div class="bg-white rounded-3xl overflow-hidden border border-stone-200 shadow-sm">
+                        <iframe title="Mapa Momreve Pastelería - Tunuyán Mendoza" src="https://www.google.com/maps?q=Tunuyan+Mendoza&z=14&output=embed" class="w-full h-[380px] border-0" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        <div class="p-4 flex flex-wrap items-center justify-between gap-3">
+                            <p class="text-sm text-stone-600"><span class="font-bold text-stone-900">Momreve Pastelería</span> · Tunuyán, Mendoza</p>
+                            <a href="https://www.google.com/maps/search/?api=1&query=Momreve+Pasteleria+Tunuyan+Mendoza" target="_blank" rel="noopener" class="bg-white border border-stone-300 text-stone-900 px-4 py-2 rounded-full text-sm font-bold hover:bg-stone-50 transition">Abrir en Google Maps</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-stone-900 text-stone-400 py-8">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-4">
+                <div class="flex items-center gap-3">
+                    <div class="w-8 h-8 bg-mom-600 rounded-lg flex items-center justify-center">
+                        <span class="text-white font-display font-bold text-xs">M</span>
+                    </div>
+                    <div>
+                        <p class="font-display font-bold text-white text-sm leading-none">MOMREVE</p>
+                        <p class="text-xs text-stone-500">Pastelería · Tunuyán, Mendoza</p>
+                    </div>
+                </div>
+                <div class="flex items-center gap-6 text-xs">
+                    <a href="https://wa.me/5492622000000" class="hover:text-white">WhatsApp</a>
+                    <a href="https://www.instagram.com/momreve.pasteleria/" target="_blank" rel="noopener" class="hover:text-white">Instagram</a>
+                    <a href="https://www.google.com/maps/search/?api=1&query=Momreve+Pasteleria+Tunuyan+Mendoza" target="_blank" rel="noopener" class="hover:text-white">Google Maps</a>
+                    <span class="text-stone-600">© 2026 Momreve</span>
+                </div>
+            </div>
+            <p class="text-center text-[11px] text-stone-600 mt-4">Demo · Fotos de muestra. Se reemplazan por fotos reales de sus tortas.</p>
+        </div>
+    </footer>
+
+    <div class="whatsapp-float">
+        <a href="https://wa.me/5492622000000?text=Hola%20Momreve!%20Quiero%20consultar%20por%20una%20torta" 
+           class="bg-green-500 w-14 h-14 rounded-full flex items-center justify-center shadow-xl hover:bg-green-600 transition hover:scale-105">
+            <svg class="w-7 h-7 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347"/></svg>
+        </a>
+    </div>
+
+</body>
+</html>
